@@ -1,10 +1,10 @@
 device_name = "ITE Tech. Inc. ITE Device(8910) Keyboard"
 
+[[dual_role]]
+input = "KEY_CAPSLOCK"
+hold = ["KEY_RIGHTCTRL"]
+tap = ["KEY_ESC"]
+
 [[remap]]
 input = ["KEY_LEFTCTRL"]
 output = ["KEY_CAPSLOCK"]
-
-[[dual_role]]
-input = "KEY_CAPSLOCK"
-hold = ["KEY_LEFTCTRL"]
-tap = ["KEY_ESC"]

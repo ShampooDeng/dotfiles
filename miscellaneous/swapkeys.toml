@@ -1,0 +1,10 @@
+device_name = "BT+2.4G KB Keyboard"
+
+[[dual_role]]
+input = "KEY_CAPSLOCK"
+hold = ["KEY_RIGHTCTRL"]
+tap = ["KEY_ESC"]
+
+[[remap]]
+input = ["KEY_LEFTCTRL"]
+output = ["KEY_CAPSLOCK"]
