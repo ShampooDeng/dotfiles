@@ -1,0 +1,16 @@
+To record the necessay package during my archlinux installation.
+
+audio driver
+graphic driver
+backlight
+network
+bluetooth
+cpu tuning
+keyboard remapping
+wm
+stattus bar
+wallpaper
+clipboard
+nerd-font
+applauncher
+browser
