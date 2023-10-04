@@ -1,0 +1,131 @@
+/*
+Check the documentation!
+https://github.com/Alexays/Waybar/wiki
+*/
+
+[{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-bottom": 0,
+  "margin-right": 0,
+  "spacing": 0,
+
+  "modules-left": [
+    "cpu",
+    "memory",
+    "temperature",
+  ],
+
+  "modules-center": ["hyprland/workspaces"],
+
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "backlight",
+    "pulseaudio",
+    "clock",
+    "battery"
+  ],
+
+  "clock": {
+    "format": "<b>{:%H:%M}</b>",
+    "format-alt": "<b>{:%a.%d,%b}</b>",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "backlight": {
+    // "device": "amdgpu_bl1",
+    "scroll-step": 5,
+    "format": "{icon} <b>{percent}</b>",
+    "tooltip": false,
+    "format-icons": ["󰖔", "", ""]
+  },
+
+  "pulseaudio": {
+    "format": "{icon} <b>{volume}%</b>",
+    "format-icons": {
+        "default": ["", "", ""]
+    },
+    "format-bluetooth": "<b>󰗾 {volume}</b>",
+    "format-bluetooth-muted": "<b>󰗿</b>",
+    "tooltip": false,
+    "format-muted": " ",
+    "on-click-right": "pavucontrol",
+    "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "scroll-step": 5,
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " <b>{usage}%</b>",
+    "max-length": 10,
+    "tooltip": false
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " <b>{used}GiB</b>",
+    "format-alt": " <b>{used:0.1f}G</b>",
+    "max-length": 10
+  },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C</b>",
+    "format": " <b>{temperatureC}°C</b>"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "<b>{name}</b>",
+    "format-icons": {
+      "urgent": "󰗖",
+      "default": ""
+    }
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 4
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "<b>{icon}{capacity}%</b>",
+    "format-charging": "<b>{icon}{capacity}%</b>",
+    "format-plugged": "<b>{icon} {capacity}%</b>",
+    "format-icons": [" ", " ", " ", " "],
+    "format-alt": "<b>{time}</b>",
+    "format-time": "{H}h{M}min",
+    "max-length": 25,
+    "tooltip": false
+  },
+
+  "network": {
+    "format-wifi": "<b>󰤨 {essid}</b>",
+    "format-ethernet": "󰈀",
+    "tooltip": false,
+    "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh", 
+    "format-disconnected": "<b>󰈂</b>"
+  },
+
+  "bluetooth": {
+    "format": "<b>󰂳</b>",
+    "format-connected": "<b>󰂯 {device_alias}</b>",
+    "format-disabled": "<b>󰂲</b>",
+    "interval": 30,
+    "on-click" : "bluetooth toggle",
+    "on-click-right" : "bash ~/.config/waybar/scripts/rofi-bluetooth",
+    "tooltip": false,
+    }
+
+}]

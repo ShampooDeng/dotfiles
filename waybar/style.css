@@ -1,0 +1,88 @@
+@import "macchiato.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 16px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 8px;
+}
+
+window#waybar {
+  background: @base;
+  border-radius: 0px;
+}
+
+#cpu {
+  color: @mantle;
+  background: @yellow;
+  margin: 0px 2.5px 0px 0px;
+}
+
+#memory {
+  color: @mantle;
+  background: @lavender;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
+#temperature {
+  color: @mantle;
+  background: @maroon;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
+#workspaces {
+  background: @surface0
+}
+
+#workspaces button {
+  border-radius: 5px;
+  padding: 0px;
+}
+
+#workspaces button label {
+  color: @text;
+  margin: 3px 3px 3px 3px;
+  padding: 0px;
+}
+
+#workspaces button.active {
+  background: @overlay1;
+  margin: 2px 0px 2px 0px;
+  border-radius: 5px;
+} 
+
+#battery {
+  color: @mantle;
+  background: @green;
+  margin: 0px 0px 0px 2.5px;
+}
+
+#backlight {
+  color: @mantle;
+  background: @peach;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
+#pulseaudio {
+  color: @mantle;
+  background: @teal;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
+#network {
+  color: @mantle;
+  background: @mauve;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
+#clock {
+  color: @mantle;
+  background: @flamingo;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
+#bluetooth {
+  color: @mantle;
+  background: @rosewater;
+  margin: 0px 2.5px 0px 2.5px;
+}
