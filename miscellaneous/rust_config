@@ -1,0 +1,11 @@
+# Place the config file in ~/.cargo/config
+[source.crates-io]
+replace-with = 'rsproxy-sparse'
+[source.rsproxy]
+registry = "https://rsproxy.cn/cates.io-index"
+[source.rsproxy-sparse]
+registry = "sparse+https://rsproxy.cn/index/"
+[registries.rsproxy]
+index = "https://rsproxy.cn/cates.io-index"
+[net]
+git-fetch-with-cli = true
