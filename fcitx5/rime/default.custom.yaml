@@ -1,3 +1,4 @@
 patch:
   schema_list:
     - schema: rime-ice
+    - schema: rime_ice
