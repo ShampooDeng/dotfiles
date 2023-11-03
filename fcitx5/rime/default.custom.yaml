@@ -1,13 +1,34 @@
 patch:
   schema_list:
     - schema: rime_ice
+
   ascii_composer:
     good_old_caps_lock: true  # true | false
+    # Set fcitxt's "Temporally switch between first and current Input
+    # Method" to empty, if the setting doesn't work.
     switch_key:
-      # Set fcitxt's "Temporally switch between first and current Input
-      # Method" to empty, if the setting doesn't work.
       Caps_Lock: clear      # commit_code | commit_text | clear
       Shift_L: commit_code  # commit_code | commit_text | inline_ascii | clear | noop
-      Shift_R: commit_code         # commit_code | commit_text | inline_ascii | clear | noop
+      Shift_R: commit_code  # commit_code | commit_text | inline_ascii | clear | noop
       Control_L: noop       # commit_code | commit_text | inline_ascii | clear | noop
       Control_R: noop       # commit_code | commit_text | inline_ascii | clear | noop
+  key_binder/bindings/+:
+    # emacs_editing:
+    - { when: composing, accept: Control+p, send: Up }
+    - { when: composing, accept: Control+n, send: Down }
+    - { when: composing, accept: Control+b, send: Left }
+    - { when: composing, accept: Control+f, send: Right }
+    - { when: composing, accept: Control+a, send: Home }
+    - { when: composing, accept: Control+e, send: End }
+    - { when: composing, accept: Control+d, send: Delete }
+    - { when: composing, accept: Control+k, send: Shift+Delete }
+    - { when: composing, accept: Control+h, send: BackSpace }
+    - { when: composing, accept: Control+g, send: Escape }
+    - { when: composing, accept: Control+bracketleft, send: Escape }
+    - { when: composing, accept: Control+y, send: Page_Up }
+    - { when: composing, accept: Alt+v, send: Page_Up }
+    - { when: composing, accept: Control+v, send: Page_Down }
+    # 翻页 , .
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
+
