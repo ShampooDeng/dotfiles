@@ -44,5 +44,4 @@ Config(
     "libshell.so",
     "libtranslate.so",
   ],
-  // TODO: add config shell plugin
 )
