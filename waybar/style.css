@@ -1,33 +1,20 @@
 @import "macchiato.css";
+/* reference:
+Thanks for https://www.reddit.com/r/unixporn/comments/cyevtf/sway_my_new_rice/
+And previous style.css in my repo
+*/
 
 * {
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 16px;
-  padding: 0px 5px 0px 5px;
-  border-radius: 8px;
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    min-height: 0;
 }
 
 window#waybar {
   background: @base;
-  border-radius: 0px;
-}
-
-#cpu {
-  color: @mantle;
-  background: @yellow;
-  margin: 0px 2.5px 0px 0px;
-}
-
-#memory {
-  color: @mantle;
-  background: @lavender;
-  margin: 0px 2.5px 0px 2.5px;
-}
-
-#temperature {
-  color: @mantle;
-  background: @maroon;
-  margin: 0px 2.5px 0px 2.5px;
+  border-bottom: 3px solid transparent;
 }
 
 #workspaces {
@@ -35,13 +22,14 @@ window#waybar {
 }
 
 #workspaces button {
-  border-radius: 5px;
-  padding: 0px;
+  padding: 0 5px;
+  margin: 0 3px;
+  border-bottom: 3px solid transparent;
 }
 
 #workspaces button label {
   color: @text;
-  margin: 3px 3px 3px 3px;
+  margin: 0px 3px 0px 3px;
   padding: 0px;
 }
 
@@ -49,40 +37,54 @@ window#waybar {
   background: @overlay1;
   margin: 2px 0px 2px 0px;
   border-radius: 5px;
-} 
+}
+
+#cpu, #memory, #temperature, #battery, #backlight, #pluseaudio, #network, #clock, #bluetooth {
+	padding: 0 5px;
+	margin: 0 0px;
+}
+
+#cpu {
+  color: @mantle;
+  background: @yellow;
+}
+
+#memory {
+  color: @mantle;
+  background: @lavender;
+}
+
+#temperature {
+  color: @mantle;
+  background: @maroon;
+}
 
 #battery {
   color: @mantle;
   background: @green;
-  margin: 0px 0px 0px 2.5px;
 }
 
 #backlight {
   color: @mantle;
   background: @peach;
-  margin: 0px 2.5px 0px 2.5px;
 }
 
 #pulseaudio {
   color: @mantle;
   background: @teal;
-  margin: 0px 2.5px 0px 2.5px;
 }
 
 #network {
   color: @mantle;
   background: @mauve;
-  margin: 0px 2.5px 0px 2.5px;
 }
 
 #clock {
   color: @mantle;
   background: @flamingo;
-  margin: 0px 2.5px 0px 2.5px;
 }
 
 #bluetooth {
   color: @mantle;
   background: @rosewater;
-  margin: 0px 2.5px 0px 2.5px;
 }
