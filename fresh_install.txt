@@ -1,0 +1,17 @@
+base
+base-devel
+linux
+linux-firmware
+btrf-progs
+
+networkmanager
+
+sudo
+zsh
+man-db
+manpages
+git
+neovim
+nano
+neofetch
+htop

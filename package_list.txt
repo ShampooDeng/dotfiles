@@ -1,16 +1,49 @@
-To record the necessay package during my archlinux installation.
+networkmanager
 
-audio driver
-graphic driver
-backlight
-network
-bluetooth
-cpu tuning
-keyboard remapping
+pavucontrol
+pulseaudio
+
+mesa
+lib32-mesa
+vulkan-intel
+lib32-vulkan-intel
+ffmpeg
+
+brightnessctl
+
+bluez
+pulseaudio-bluetooth
+
+qt5-wayland
+qt6-wayland
+wev
+wl-clipboard
+hyprland
+hyprpaper
+greetd
+greetd-tuigreet
+mako
+waylock
+waybar
+
+firefox
+
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-common
+ttf-jetbrains-mono-nerd
+ttf-dejavu-nerd
+otf-codenewroman-nerd
+
 wm
-stattus bar
-wallpaper
-clipboard
 nerd-font
-applauncher
-browser
+
+lazygit
+ranger
+eza
+bat
+ripgrep
+fd
+fzf
+btop
+
+appimagelauncher-bin
