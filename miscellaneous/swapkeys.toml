@@ -1,4 +1,5 @@
-device_name = "BT+2.4G KB Keyboard"
+device_name = "USB Keyboard"
+phys = "usb-0000:00:14.0-1/input0"
 
 [[dual_role]]
 input = "KEY_CAPSLOCK"
